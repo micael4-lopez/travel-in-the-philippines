@@ -52,27 +52,41 @@ body {
   color: var(--primary);
 }
 
+/* Navigation container */
+/* Navigation container */
 .main-nav ul {
-  list-style: none;
-  display: flex;
+  list-style: none;     
+  margin: 1rem;
+  padding: 0.6rem 2rem;
+  display:flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;  /* center horizontally */
 }
 
+/* Navigation links (lahat pantay laki) */
 .main-nav a {
-  text-decoration: none;
-  color: var(--muted);
-  padding: 0.5rem 0.75rem;
+  display:inline-block;      /* para yung bg sakto sa text */
+  text-decoration:none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.6rem 1rem;       /* pantay na padding */
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
-  display:inline-block;
-  white-space: nowrap;
+  white-space: nowrap;        /* hindi mapuputol ang El Nido */
+  line-height: 1.5;           /* pantayin height */
+    /* align sa gitna */
 }
 
+/* Hover at active page */
 .main-nav a:hover,
-.main-nav a[aria-current="page"] {
-  background: var(--primary);
-  color: #fff;
+.main-nav a.active {
+  background: #00796b;   /* green bg */
+  color: #fff;           /* white text */
 }
+
+
+
 
 /* ===== Hero Section ===== */
 .hero {
@@ -213,6 +227,11 @@ form button:hover {
   border-left: 3px solid var(--primary);
   margin-top: 0.5rem;
   border-radius: 0 6px 6px 6px;
+}
+
+.site-header {
+  position:sticky;
+  z-index: 1000;  /* bring navbar to front */
 }
 
 .site-footer {
